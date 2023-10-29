@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Contenido de la Tabla{% endblock %}
+
+{% block content %}
+<h2>Contenido de la Tabla:</h2>
+<table border="1">
+  <tr>
+    {% for columna in contenido_tabla[0].keys() %}
+      <th>{{ columna }}</th>
+    {% endfor %}
+  </tr>
+  {% for fila in contenido_tabla %}
+    <tr>
+      {% for valor in fila.values() %}
+        <td>{{ valor }}</td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}

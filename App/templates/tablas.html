@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Tablas Disponibles{% endblock %}
+
+{% block content %}
+<h2>Tablas Disponibles:</h2>
+<ul>
+    {% for tabla in tablas %}
+    <li {% if tabla[0] == tabla_seleccionada %}class="seleccionado"{% endif %}>
+        <a href="{{ url_for('mostrar_tabla', nombre_tabla=tabla[0], user=user, password=password, database=database) }}">{{ tabla[0] }}</a>
+    </li>
+{% endfor %}
+
+</ul>
+{% endblock %}

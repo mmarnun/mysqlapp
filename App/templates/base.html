@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/pure/pure-min.css">
+    <link rel="stylesheet" href="/static/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">MySQL App</h1>
+        </div>
+    </div>
+	
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            {% block content %}{% endblock %}
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item"><a href="javascript:history.back()" class="pure-menu-link back-button">Volver atrás</a></li>
+                        <li class="pure-menu-item"><a href="/" class="pure-menu-link">Volver al inicio</a></li>
+                        <li class="pure-menu-item github-link"><a href="https://github.com/mmarnun/mysqlapp" class="pure-menu-link github-button">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

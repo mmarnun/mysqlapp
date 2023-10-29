@@ -1,4 +1,4 @@
-#!/home/alex/Documentos/repositorios/mysqlapp/App/app/bin/python3
+#!/home/alex/Documentos/repositorios/mysqlapp/web/app/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
